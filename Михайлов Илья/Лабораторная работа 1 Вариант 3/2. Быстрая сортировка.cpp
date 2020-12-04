@@ -1,5 +1,5 @@
 #include <iostream>
-//функция Быстрой сортировки
+//С„СѓРЅРєС†РёСЏ Р‘С‹СЃС‚СЂРѕР№ СЃРѕСЂС‚РёСЂРѕРІРєРё
 void speedsort(int* mas, int first, int last)
 {
 	int mid, count;
