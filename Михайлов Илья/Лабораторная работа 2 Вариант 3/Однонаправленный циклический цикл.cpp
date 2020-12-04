@@ -7,50 +7,50 @@ int main(){
 	setlocale(LC_ALL, "Russian");
 	while (imenu != 5) {
 		system("cls");
-		//вывод массива
-		if ( mass.empty() ) {std::cout << "Массив пустой!!!";
+		//РІС‹РІРѕРґ РјР°СЃСЃРёРІР°
+		if ( mass.empty() ) {std::cout << "РњР°СЃСЃРёРІ РїСѓСЃС‚РѕР№!!!";
 		}else{
-			std::cout << "Массив: { ";
+			std::cout << "РњР°СЃСЃРёРІ: { ";
 			for (int i = 0; i != mass.size(); i++) { std::cout << mass[i] << ", "; }
 			std::cout << "}";
 		}std::cout << std::endl;
 
-		//вывод меню
-		std::cout << std::endl << "1. Добавить значение в конец." << std::endl << "2. Вставить после." << std::endl << "3. Получить значение по индексу." << std::endl << "4. Удаление элемента по значению." << std::endl << "5. Выход." << std::endl << ">> ";
+		//РІС‹РІРѕРґ РјРµРЅСЋ
+		std::cout << std::endl << "1. Р”РѕР±Р°РІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ РєРѕРЅРµС†." << std::endl << "2. Р’СЃС‚Р°РІРёС‚СЊ РїРѕСЃР»Рµ." << std::endl << "3. РџРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РїРѕ РёРЅРґРµРєСЃСѓ." << std::endl << "4. РЈРґР°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РїРѕ Р·РЅР°С‡РµРЅРёСЋ." << std::endl << "5. Р’С‹С…РѕРґ." << std::endl << ">> ";
         std::cin >> imenu;
 
-		//функции меню
+		//С„СѓРЅРєС†РёРё РјРµРЅСЋ
         switch (imenu) {
 		case 1:
-			//добавить в конец
+			//РґРѕР±Р°РІРёС‚СЊ РІ РєРѕРЅРµС†
 			system("cls");
-			std::cout << "число: ";
+			std::cout << "С‡РёСЃР»Рѕ: ";
 			std::cin >> number1;
 			mass.push_back(number1);
 			break;
 		case 2:
-			//вставить после такогото индекса
+			//РІСЃС‚Р°РІРёС‚СЊ РїРѕСЃР»Рµ С‚Р°РєРѕРіРѕС‚Рѕ РёРЅРґРµРєСЃР°
 			system("cls");
-			std::cout << "число: ";
+			std::cout << "С‡РёСЃР»Рѕ: ";
 			std::cin >> number1;
-			std::cout << "вставить в: ";
+			std::cout << "РІСЃС‚Р°РІРёС‚СЊ РІ: ";
 			std::cin >> number2;
 			mass.emplace(mass.begin()+number2+1, number1);
 			break;
 		case 3: 
-			//получить значение
+			//РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ
 			system("cls");
-			std::cout << "индекс: ";
+			std::cout << "РёРЅРґРµРєСЃ: ";
 			std::cin >> number1;
 			std::cout << mass[number1-1] << std::endl;
 			system("pause");
 			break;
 		case 4: 
-			//удаление элемента по значению
-			std::cout << "число: ";
+			//СѓРґР°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚Р° РїРѕ Р·РЅР°С‡РµРЅРёСЋ
+			std::cout << "С‡РёСЃР»Рѕ: ";
 			std::cin >> number1;
 			for (int i = 0; i != mass.size(); i++) {
-				//Если находим - удаляем
+				//Р•СЃР»Рё РЅР°С…РѕРґРёРј - СѓРґР°Р»СЏРµРј
 				if (mass[i] == number1) {mass.erase(mass.begin() + i);break;}
 			}
 			break;
