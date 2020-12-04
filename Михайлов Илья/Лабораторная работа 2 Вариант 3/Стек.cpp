@@ -7,26 +7,26 @@ int main() {
 	std::stack <int> mass;
 	std::stack <int> copymass;
 	while (imenu != 6) {
-		//вывод меню
+		//РІС‹РІРѕРґ РјРµРЅСЋ
 		system("cls");
-		std::cout << "Размер стека:		" << mass.size() << std::endl;
-		std::cout << "Размер копии стека:	" << copymass.size() << std::endl;
+		std::cout << "Р Р°Р·РјРµСЂ СЃС‚РµРєР°:		" << mass.size() << std::endl;
+		std::cout << "Р Р°Р·РјРµСЂ РєРѕРїРёРё СЃС‚РµРєР°:	" << copymass.size() << std::endl;
 		std::cout << "------------------------" << std::endl;
-		std::cout << "1. Вставка эллемента." << std::endl << "2. Извлечь эллемент." << std::endl << "3. Клонирование." << std::endl << "4. Извлечь эллемент из копии." << std::endl << "5. Очистить стек." << std::endl << "6. Выход." << std::endl << ">> ";
+		std::cout << "1. Р’СЃС‚Р°РІРєР° СЌР»Р»РµРјРµРЅС‚Р°." << std::endl << "2. РР·РІР»РµС‡СЊ СЌР»Р»РµРјРµРЅС‚." << std::endl << "3. РљР»РѕРЅРёСЂРѕРІР°РЅРёРµ." << std::endl << "4. РР·РІР»РµС‡СЊ СЌР»Р»РµРјРµРЅС‚ РёР· РєРѕРїРёРё." << std::endl << "5. РћС‡РёСЃС‚РёС‚СЊ СЃС‚РµРє." << std::endl << "6. Р’С‹С…РѕРґ." << std::endl << ">> ";
 		std::cin >> imenu;
 		switch (imenu) {
 			case 1:
 				system("cls");
-				std::cout << "Число для ввода: ";
+				std::cout << "Р§РёСЃР»Рѕ РґР»СЏ РІРІРѕРґР°: ";
 				std::cin >> number1;
 				mass.push(number1);
 				break;
 			case 2:
 				system("cls");
 				if ( !mass.empty() ) {
-					std::cout << "Стек: " << mass.top() << " извлечен." << std::endl;
+					std::cout << "РЎС‚РµРє: " << mass.top() << " РёР·РІР»РµС‡РµРЅ." << std::endl;
 					mass.pop();
-				}else{ std::cout << "Стек пустой." << std::endl; }
+				}else{ std::cout << "РЎС‚РµРє РїСѓСЃС‚РѕР№." << std::endl; }
 				std::system("pause");
 				break;
 			case 3: 
@@ -36,10 +36,10 @@ int main() {
 			case 4:
 				system("cls");
 				if (!copymass.empty()) {
-					std::cout << "Стек: " << copymass.top() << " извлечен." << std::endl;
+					std::cout << "РЎС‚РµРє: " << copymass.top() << " РёР·РІР»РµС‡РµРЅ." << std::endl;
 					copymass.pop();
 				}
-				else { std::cout << "Стек пустой." << std::endl; }
+				else { std::cout << "РЎС‚РµРє РїСѓСЃС‚РѕР№." << std::endl; }
 				std::system("pause");
 				break;
 			case 5:
@@ -53,12 +53,5 @@ int main() {
 				copymass = std::stack<int>();
 				break;
 		}
-
-
-
-
-
 	}
-
-
 }
